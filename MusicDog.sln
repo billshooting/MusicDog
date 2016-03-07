@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8CCBD06A-83FA-4AD4-A1D2-606BFDF43048}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D3F4B32B-2C43-4A19-A628-05C704EDEF6F}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MusicDog", "src\MusicDog\MusicDog.xproj", "{981E5085-3122-485E-B694-7C750EBFBC7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{981E5085-3122-485E-B694-7C750EBFBC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981E5085-3122-485E-B694-7C750EBFBC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981E5085-3122-485E-B694-7C750EBFBC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981E5085-3122-485E-B694-7C750EBFBC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{981E5085-3122-485E-B694-7C750EBFBC7F} = {8CCBD06A-83FA-4AD4-A1D2-606BFDF43048}
+	EndGlobalSection
+EndGlobal

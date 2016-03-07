@@ -1,0 +1,114 @@
+﻿@model MusicDog.Models.WebSong
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+        <h4>WebSong</h4>
+        <hr />
+        <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Album" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Album" class="form-control" />
+                <span asp-validation-for="Album" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Albumid" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Albumid" class="form-control" />
+                <span asp-validation-for="Albumid" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Albummid" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Albummid" class="form-control" />
+                <span asp-validation-for="Albummid" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Albumpic_big" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Albumpic_big" class="form-control" />
+                <span asp-validation-for="Albumpic_big" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Albumpic_small" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Albumpic_small" class="form-control" />
+                <span asp-validation-for="Albumpic_small" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Artist" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Artist" class="form-control" />
+                <span asp-validation-for="Artist" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="DownUrl" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="DownUrl" class="form-control" />
+                <span asp-validation-for="DownUrl" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Duration" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Duration" class="form-control" />
+                <span asp-validation-for="Duration" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Singerid" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Singerid" class="form-control" />
+                <span asp-validation-for="Singerid" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Songid" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Songid" class="form-control" />
+                <span asp-validation-for="Songid" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Title" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Url" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Url" class="form-control" />
+                <span asp-validation-for="Url" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

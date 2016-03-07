@@ -1,0 +1,150 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 bandlistcover">
+            <a asp-controller="WebSongs" asp-action="BandList" asp-route-id="5">
+                <img class="img-responsive" src="~/images/BandListCover/内地.jpg" />
+                <p class="text-center">内地榜单</p>
+            </a>
+        </div>
+        <div class="col-lg-4  col-md-4 col-sm-6 bandlistcover">
+            <a asp-controller="WebSongs" asp-action="BandList" asp-route-Id="6">
+                <img class="img-responsive" src="~/images/BandListCover/港台.jpg" />
+                <p class="text-center">港台榜单</p>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 bandlistcover">
+            <a asp-controller="WebSongs" asp-action="BandList" asp-route-Id="3">
+                <img class="img-responsive" src="~/images/BandListCover/欧美.jpg" />
+                <p class="text-center">欧美榜单</p>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 bandlistcover">
+            <a asp-controller="WebSongs" asp-action="BandList" asp-route-Id="17">
+                <img class="img-responsive" src="~/images/BandListCover/日本.jpg" />
+                <p class="text-center">日本榜单</p>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 bandlistcover">
+            <a asp-controller="WebSongs" asp-action="BandList" asp-route-Id="16">
+                <img class="img-responsive" src="~/images/BandListCover/韩国.jpg" />
+                <p class="text-center">韩国榜单</p>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 bandlistcover">
+            <a asp-controller="WebSongs" asp-action="BandList" asp-route-Id="19">
+                <img class="img-responsive" src="~/images/BandListCover/摇滚.jpg" />
+                <p class="text-center">摇滚榜单</p>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 bandlistcover">
+            <a asp-controller="WebSongs" asp-action="BandList" asp-route-Id="23">
+                <img class="img-responsive" src="~/images/BandListCover/销量.jpg" />
+                <p class="text-center">销量榜单</p>
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 bandlistcover">
+            <a asp-controller="WebSongs" asp-action="BandList" asp-route-Id="26">
+                <img class="img-responsive" src="~/images/BandListCover/热歌.jpg" />
+                <p class="text-center">热歌榜单</p>
+            </a>
+        </div>
+        <div class="col-lg-4  col-md-4 col-sm-6 bandlistcover">
+            <a asp-controller="WebSongs" asp-action="BandList" asp-route-Id="18">
+                <img class="img-responsive" src="~/images/BandListCover/陈粒.jpg" />
+                <p class="text-center">民谣榜单</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="row toptenbandlist">
+        <div class="bandlistheader">
+            <p>
+                <span class="glyphicon glyphicon-th-list" style="color:indianred"></span>
+                <strong>榜单前十</strong>
+                <span class="text-right more">
+                    <a href="#" style="color:indianred"><strong>更多</strong></a>
+                </span>
+            </p>
+            <div style="height:0;overflow:hidden;border-top:1px solid #CD5C5C"></div>
+        </div>
+
+        <div class="bandlist-top-ten">
+            <div class="row">
+                <dl class="top-ten-list col-md-4 col-sm-6 col-xs-12">
+                    <dt class="top-content">
+                        <div class="row">
+                            <div class="top-cover col-xs-4">
+                                <a asp-controller="WebSongs" asp-action="BandList" asp-route-id="5" title="内地音乐榜">
+                                    <img src="~/images/Default/Default.jpg" />
+                                </a>
+                            </div>
+                            <div class="top-ten-title col-xs-6">
+                                <a asp-controller="WebSongs" asp-action="BandList" asp-route-id="5" title="内地音乐榜">
+                                    <span>内地音乐榜</span>
+                                </a>
+                                <div class="function-btn">
+                                    <a href="#" title="开始播放">
+                                        <span class="glyphicon glyphicon-play" style="color:darkgray"></span>
+                                    </a>
+                                    <a href="#" title="收藏歌单">
+                                        <span class="glyphicon glyphicon-plus" style="color:darkgray"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </dt>
+
+                    <dd style="display:block">
+                        <ol class="top-ten-orderlist">
+                            @for (int i = 1; i < 11; i++)
+                            {
+                                <a asp-controller="WebSongs" asp-action="LyricInfo" asp-route-id="@Model.Band1List[i-1].Songid" asp-route-title="@Model.Band1List[i-1].Title" asp-route-artist="@Model.Band1List[i-1].Artist" asp-route-picurl="@Model.Band1List[i-1].Albumpic_big">
+                                    <li class="top-ten-list-item">@Model.Band1List[i - 1].Title</li>
+                                </a>
+                            }
+                            <li class="top-ten-list-item text-right" style="list-style-position:initial">
+                                <a class="text-right" asp-controller="WebSongs" asp-action="BandList" style="color:indianred">查看更多...</a>
+                            </li>
+                        </ol>
+                    </dd>
+                </dl>
+                <dl class="top-ten-list col-md-4 col-sm-6 col-xs-12">
+                    <dt class="top-content">
+                        <div class="row">
+                            <div class="top-cover col-xs-6">
+                                <a asp-controller="WebSongs" asp-action="Index" title="内地音乐榜">
+                                    <img src="~/images/Default/Default.jpg" />
+                                </a>
+                            </div>
+                            <div class="top-ten-title col-xs-6">
+                                <a asp-controller="WebSongs" asp-action="Index" title="内地音乐榜">
+                                    <span>内地音乐榜</span>
+                                </a>
+                            </div>
+                        </div>
+                    </dt>
+                </dl>
+                <dl class="top-ten-list col-md-4 col-sm-6 col-xs-12">
+                    <dt class="top-content">
+                        <div class="row">
+                            <div class="top-cover col-xs-6">
+                                <a asp-controller="WebSongs" asp-action="Index" title="内地音乐榜">
+                                    <img src="~/images/Default/Default.jpg" />
+                                </a>
+                            </div>
+                            <div class="top-ten-title col-xs-6">
+                                <a asp-controller="WebSongs" asp-action="Index" title="内地音乐榜">
+                                    <span>内地音乐榜</span>
+                                </a>
+                            </div>
+                        </div>
+                    </dt>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>

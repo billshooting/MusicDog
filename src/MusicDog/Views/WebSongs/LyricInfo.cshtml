@@ -1,0 +1,35 @@
+﻿@model MusicDog.Models.WebSong
+
+@{
+    ViewData["Title"] = "LyricInfo";
+    string picurl = Model.Albumpic_big;
+}
+
+<div class="row">
+    <div class="col-xs-4">
+        <img style="margin-top:50px; margin-left:20px;" src="@picurl"/><br/>
+        <div style="margin-top:30px;margin-left:30px">
+            <button type="button" class="btn btn-info glyphicon glyphicon-play btn-lg">播放</button>
+            <button type="button" class="btn btn-default glyphicon glyphicon-plus btn-lg">添加</button>
+        </div>
+    </div>
+    <div class="col-xs-8">
+        <div class="lyric-head" style="margin-top:50px;">
+            <h2>@Model.Title</h2>
+            <h4>歌手: @Model.Artist</h4><br/><br/>
+            <div>
+                @{
+                    foreach (var substr in Model.LyricText.Split(' '))
+                    {
+                        <p style="font-size:12px">@substr</p>
+                    }
+                }
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
